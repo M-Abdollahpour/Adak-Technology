@@ -54,7 +54,7 @@ const Banner = () => {
         <img
           loading="lazy"
           className="h-auto max-w-full object-contain animate-float-y"
-          src="https://adakfan.ir/assets/adak-hero-B1qMsahv.png"
+          src="/images/banner/bannerHero.webp"
           alt="banner about structure"
         />
       </div>
