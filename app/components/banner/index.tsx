@@ -8,11 +8,13 @@ import { BiSupport } from "react-icons/bi";
 import { scrollToSection } from "~/utils/scrollToSection";
 import { useLanguage } from "~/hooks/useLanguage";
 import CountUpModule from "react-countup";
+import CountOnce from "../ui/countOnce";
 const CountUp = (CountUpModule as any).default ?? CountUpModule;
 
 const Banner = () => {
   const { t, isPersian } = useLanguage();
-
+  const formatNumber = (n: number) =>
+    n.toLocaleString(isPersian ? "fa-IR" : "en-US");
   return (
     <div className="grid grid-cols-1 md:grid-cols-2">
       <div className="flex flex-col gap-8  justify-center">
@@ -66,17 +68,7 @@ const Banner = () => {
             </div>
             <div className="flex gap-3 items-center ">
               <span className="text-[#142b4a] text-3xl">
-                +
-                <CountUp
-                  end={120}
-                  start={0}
-                  duration={2}
-                  enableScrollSpy
-                  scrollSpyOnce
-                  formattingFn={(n: number) =>
-                    n.toLocaleString(isPersian ? "fa-IR" : "en-US")
-                  }
-                />
+                +<CountOnce end={120} format={formatNumber} />
               </span>
               <div className="flex flex-col text-xl">
                 <span className="text-[#0e1f36]">{t("banner.projects")}</span>
@@ -92,17 +84,7 @@ const Banner = () => {
             </div>
             <div className="flex gap-3 items-center">
               <span className="text-[#142b4a] text-3xl">
-                +
-                <CountUp
-                  end={80}
-                  start={0}
-                  duration={2}
-                  enableScrollSpy
-                  scrollSpyOnce
-                  formattingFn={(n: number) =>
-                    n.toLocaleString(isPersian ? "fa-IR" : "en-US")
-                  }
-                />
+                +<CountOnce end={80} format={formatNumber} />
               </span>
               <div className="flex flex-col text-xl">
                 <span className="text-[#0e1f36]">
