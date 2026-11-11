@@ -29,7 +29,7 @@ const Service = () => {
   return (
     <div className="mt-10 flex w-full flex-col items-center justify-center gap-6 px-4">
       <Title title={t("services.title")} process={t("services.process")} />
-      <div className="flex flex-wrap flex-col md:flex-row gap-6 xl:gap-3 justify-center xl:justify-between items-center w-full">
+      <div className="flex flex-wrap flex-col md:flex-row gap-6 xl:gap-4 justify-center xl:justify-between items-center w-full">
         {services.map((s) => (
           <div
             key={s.key}

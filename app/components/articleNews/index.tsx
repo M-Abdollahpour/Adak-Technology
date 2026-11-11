@@ -11,7 +11,7 @@ const ArticleNews = () => {
       <h2 className="text-[25px] xl:text-[38px] text-[#0E1F36] font-bold">
         {t("news.title")}
       </h2>
-      <div className="flex flex-wrap flex-col md:flex-row gap-6 xl:gap-3 justify-center xl:justify-between items-center w-full">
+      <div className="flex flex-wrap flex-col md:flex-row gap-6 xl:gap-4 justify-center xl:justify-around items-center w-full">
         {articles.map((article) => (
           <Link key={article.id} to={"/"} className="w-full max-w-106.75">
             <div className="relative flex w-full flex-col duration-200 hover:scale-102">
