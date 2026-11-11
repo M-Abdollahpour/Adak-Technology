@@ -68,7 +68,12 @@ const Banner = () => {
             </div>
             <div className="flex gap-3 items-center ">
               <span className="text-[#142b4a] text-3xl">
-                +<CountOnce end={120} format={formatNumber} />
+                +
+                <CountOnce
+                  key={isPersian ? "fa" : "en"}
+                  end={120}
+                  format={formatNumber}
+                />
               </span>
               <div className="flex flex-col text-xl">
                 <span className="text-[#0e1f36]">{t("banner.projects")}</span>
@@ -84,7 +89,12 @@ const Banner = () => {
             </div>
             <div className="flex gap-3 items-center">
               <span className="text-[#142b4a] text-3xl">
-                +<CountOnce end={80} format={formatNumber} />
+                +
+                <CountOnce
+                  key={isPersian ? "fa" : "en"}
+                  end={80}
+                  format={formatNumber}
+                />
               </span>
               <div className="flex flex-col text-xl">
                 <span className="text-[#0e1f36]">
