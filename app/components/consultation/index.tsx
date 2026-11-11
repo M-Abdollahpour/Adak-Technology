@@ -1,0 +1,21 @@
+import { Link } from "react-router";
+import { useLanguage } from "~/hooks/useLanguage";
+
+const ConsultationCustomer = () => {
+  const { t } = useLanguage();
+  return (
+    <div className="mt-15 flex min-h-30.5 flex-col items-center justify-between gap-4 rounded-2xl bg-[#123E72] px-6 py-6 text-center text-white md:flex-row md:px-10 md:text-start lg:px-20">
+      <div className="text-[18px] md:text-[20px] lg:text-[24px]">
+        <h3 className="font-bold">{t("consultation.title")}</h3>
+        <p>{t("consultation.paragraph")}</p>
+      </div>
+      <Link
+        to={"/"}
+        className="flex h-11 w-full shrink-0 items-center justify-center rounded-full bg-[#FF680D] text-[18px] font-bold sm:w-58.5 md:text-[20px]"
+      >
+        {t("consultation.request")}
+      </Link>
+    </div>
+  );
+};
+export default ConsultationCustomer;

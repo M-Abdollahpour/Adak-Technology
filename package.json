@@ -11,9 +11,15 @@
   "dependencies": {
     "@react-router/node": "^8.5.1",
     "@react-router/serve": "^8.5.1",
+    "antd": "^6.7.0",
+    "i18next": "^27.0.1",
     "isbot": "^5.1.36",
     "react": "^19.2.8",
+    "react-countup": "^6.5.3",
     "react-dom": "^19.2.8",
+    "react-fast-marquee": "^1.6.5",
+    "react-i18next": "^18.0.0",
+    "react-icons": "^5.7.0",
     "react-router": "^8.5.1"
   },
   "devDependencies": {
