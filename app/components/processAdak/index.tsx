@@ -3,11 +3,11 @@ import { useLanguage } from "~/hooks/useLanguage";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 const items = [
-  { key: "support", img: "/images/adak/adakone.svg", alt: "پشتیبانی" },
-  { key: "team", img: "/images/adak/adaktwo.svg", alt: "تیم" },
-  { key: "innovation", img: "/images/adak/adakthree.svg", alt: "نوآوری" },
-  { key: "quality", img: "/images/adak/adakfour.svg", alt: "کیفیت" },
-  { key: "pricing", img: "/images/adak/adakfive.svg", alt: "قیمت گذاری شفاف" },
+  { key: "support", img: "/images/adak/adakone.png", alt: "پشتیبانی" },
+  { key: "team", img: "/images/adak/adaktwo.png", alt: "تیم" },
+  { key: "innovation", img: "/images/adak/adakthree.png", alt: "نوآوری" },
+  { key: "quality", img: "/images/adak/adakfour.png", alt: "کیفیت" },
+  { key: "pricing", img: "/images/adak/adakfive.png", alt: "قیمت گذاری شفاف" },
 ] as const;
 
 const ProcessAdaK = () => {

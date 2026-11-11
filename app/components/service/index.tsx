@@ -6,19 +6,19 @@ import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 const services = [
   {
     key: "network",
-    img: "/images/network/photoone.svg",
+    img: "/images/network/photoone.png",
     alt: "شبکه و زیرساخت",
     tags: ["dataCenter", "virtualization", "support"],
   },
   {
     key: "security",
-    img: "/images/network/phototwo.svg",
+    img: "/images/network/phototwo.png",
     alt: "امنیت",
     tags: ["networkSecurity", "incidentMonitoring", "vulnerabilityAssessment"],
   },
   {
     key: "software",
-    img: "/images/network/photothree.svg",
+    img: "/images/network/photothree.png",
     alt: "نرم افزار",
     tags: ["customDevelopment", "integration", "enterpriseSystems"],
   },

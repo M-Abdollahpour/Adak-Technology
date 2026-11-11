@@ -17,7 +17,7 @@ const Partnership = () => {
           <div>
             <img
               loading="lazy"
-              src="/images/cardimage/cardone.svg"
+              src="/images/cardimage/cardone.png"
               alt="پروژه جدید"
             />
           </div>
@@ -42,7 +42,7 @@ const Partnership = () => {
             <img
               loading="lazy"
               className="max-w-full h-auto"
-              src="/images/cardimage/cardtwo.svg"
+              src="/images/cardimage/cardtwo.png"
               alt="تأمین تجهیزات"
             />
           </div>
@@ -67,7 +67,7 @@ const Partnership = () => {
             <img
               loading="lazy"
               className="max-w-full h-auto"
-              src="/images/cardimage/cardthree.svg"
+              src="/images/cardimage/cardthree.png"
               alt="پروژه جدید"
             />
           </div>

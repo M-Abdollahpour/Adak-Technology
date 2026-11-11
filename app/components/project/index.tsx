@@ -8,19 +8,19 @@ import { useEffect, useState } from "react";
 const projects = [
   {
     key: "wirelessNetwork",
-    img: "/images/projects/photoone.svg",
+    img: "/images/projects/photoone.png",
     alt: "نت ورک",
     border: "border-[#AE531B]",
   },
   {
     key: "dataCenterNetwork",
-    img: "/images/projects/phototwo.svg",
+    img: "/images/projects/phototwo.png",
     alt: "دیتا سنتر",
     border: "border-[#0E1F36]",
   },
   {
     key: "voip",
-    img: "/images/projects/photothree.svg",
+    img: "/images/projects/photothree.png",
     alt: "نت ورک",
     border: "border-[#AE531B]",
   },
@@ -76,7 +76,7 @@ const Project = () => {
                     src={p.img}
                     alt={p.alt}
                   />
-                  <h3 className="self-start px-6 text-[20px] font-bold md:px-13 md:text-[23.5px]">
+                  <h3 className="self-start px-6 text-[21px] font-bold md:px-13">
                     {t(`project.${p.key}.header`)}
                   </h3>
                   <p className="px-6 text-[14px] font-bold opacity-70 md:px-13 md:text-[16px]">

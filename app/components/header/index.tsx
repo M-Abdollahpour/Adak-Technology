@@ -6,6 +6,7 @@ import { CommentOutlined, CustomerServiceOutlined } from "@ant-design/icons";
 import ToggleLanguage from "../ui/language";
 import { FloatButton } from "antd";
 import { scrollToSection } from "../../utils/scrollToSection";
+import ScrollProgress from "../ui/scrollProgress";
 export default function Header() {
   const { t, isPersian } = useLanguage();
   const header = useRef<HTMLElement | null>(null);
@@ -41,6 +42,7 @@ export default function Header() {
       ref={header}
       className="fixed left-0 top-0 right-0 z-50 w-full max-w-full"
     >
+      <ScrollProgress />
       <div className="relative mx-auto flex w-full max-w-360 h-20 lg:h-33.5 items-center justify-between gap-3 md:gap-7 lg:gap-15 px-4 lg:px-7">
         <div className="flex shrink-0 items-center gap-1 cursor-pointer">
           <img

@@ -4,13 +4,13 @@ import Title from "../ui/title";
 const TrustComponies = () => {
   const { t } = useLanguage();
   const items = [
-    { id: 1, src: "/images/companies/four.svg" },
-    { id: 2, src: "/images/companies/two.svg" },
-    { id: 3, src: "/images/companies/three.svg" },
-    { id: 4, src: "/images/companies/four.svg" },
-    { id: 5, src: "/images/companies/five.svg" },
-    { id: 6, src: "/images/companies/three.svg" },
-    { id: 7, src: "/images/companies/five.svg" },
+    { id: 1, src: "/images/companies/one.png" },
+    { id: 2, src: "/images/companies/five.png" },
+    { id: 3, src: "/images/companies/three.png" },
+    { id: 4, src: "/images/companies/four.png" },
+    { id: 5, src: "/images/companies/five.png" },
+    { id: 6, src: "/images/companies/one.png" },
+    { id: 7, src: "/images/companies/three.png" },
   ];
   const loopItems = [...items, ...items];
 

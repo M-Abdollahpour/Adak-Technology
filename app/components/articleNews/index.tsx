@@ -17,13 +17,13 @@ const ArticleNews = () => {
                 <img
                   loading="lazy"
                   className="absolute inset-0 z-0 h-full w-full object-cover"
-                  src="/images/article/back.svg"
+                  src="/images/article/back.png"
                   alt=""
                 />
                 <img
                   loading="lazy"
                   className="absolute inset-0 z-10 h-full w-full object-cover"
-                  src="/images/article/Vector.svg"
+                  src="/images/article/vector.png"
                   alt="مجازی سازی زیرساخت"
                 />
               </div>

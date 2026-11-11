@@ -1,5 +1,3 @@
-import { useTranslation } from "react-i18next";
-
 import {
   FaArrowLeftLong,
   FaArrowRightLong,
@@ -7,12 +5,10 @@ import {
 } from "react-icons/fa6";
 import { MdOutlineEngineering } from "react-icons/md";
 import { BiSupport } from "react-icons/bi";
-import { Link } from "react-router";
 import { scrollToSection } from "~/utils/scrollToSection";
+import { useLanguage } from "~/hooks/useLanguage";
 const Banner = () => {
-  const { t, i18n } = useTranslation();
-  const language = i18n.resolvedLanguage ?? i18n.language;
-  const isPersian = language.startsWith("fa");
+  const { t, isPersian } = useLanguage();
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2">
