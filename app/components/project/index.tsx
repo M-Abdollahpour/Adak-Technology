@@ -3,6 +3,7 @@ import Title from "../ui/title";
 import { Carousel } from "antd";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-router";
+import { useEffect, useState } from "react";
 
 const projects = [
   {
@@ -29,22 +30,32 @@ const slides = [...projects, ...projects];
 const Project = () => {
   const { t, isPersian } = useLanguage();
 
+  const [slidesToShow, setSlidesToShow] = useState(3);
+
+  useEffect(() => {
+    const update = () => {
+      const w = window.innerWidth;
+      setSlidesToShow(w < 600 ? 1 : w < 1080 ? 2 : 3);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
   return (
     <div className="mt-10 flex w-full flex-col items-center justify-center gap-6">
       <Title title={t("project.title")} process={t("project.process")} />
       <div className="w-full min-w-0 max-w-360 overflow-hidden">
         <Carousel
+          key={slidesToShow}
           rtl={isPersian}
           dots={false}
           arrows
           infinite
           autoplay
           speed={1000}
-          slidesToShow={3}
-          responsive={[
-            { breakpoint: 1079, settings: { slidesToShow: 2 } },
-            { breakpoint: 600, settings: { slidesToShow: 1 } },
-          ]}
+          slidesToShow={slidesToShow}
+          slidesToScroll={1}
         >
           {slides.map((p, index) => (
             <div
