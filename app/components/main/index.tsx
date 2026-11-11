@@ -7,24 +7,39 @@ import Project from "../project";
 import ProcessAdaK from "../processAdak";
 import ArticleNews from "../articleNews";
 import TrustComponies from "../trustCompnies";
-import Consultation from "../consultation";
 import ConsultationCustomer from "../consultation";
 
 const Main = () => {
   return (
     <Fragment>
       <div className="container mx-auto px-7 max-w-360">
-        <Banner />
-        <Partnership />
-        <Step />
-        <Service />
-        <Project />
-        <ProcessAdaK />
-        <ArticleNews />
+        <section id="home">
+          <Banner />
+        </section>
+        <section id="equipment">
+          <Partnership />
+        </section>
+        <section id="solutions">
+          <Step />
+        </section>
+        <section id="services">
+          <Service />
+        </section>
+        <section id="projects">
+          <Project />
+        </section>
+        <section id="about">
+          <ProcessAdaK />
+        </section>
+        <section id="articles">
+          <ArticleNews />
+        </section>
       </div>
       <TrustComponies />
       <div className="container mx-auto px-7 max-w-360">
-        <ConsultationCustomer />
+        <section id="contact">
+          <ConsultationCustomer />
+        </section>
       </div>
     </Fragment>
   );

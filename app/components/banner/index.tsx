@@ -8,6 +8,7 @@ import {
 import { MdOutlineEngineering } from "react-icons/md";
 import { BiSupport } from "react-icons/bi";
 import { Link } from "react-router";
+import { scrollToSection } from "~/utils/scrollToSection";
 const Banner = () => {
   const { t, i18n } = useTranslation();
   const language = i18n.resolvedLanguage ?? i18n.language;
@@ -28,17 +29,25 @@ const Banner = () => {
             <p>{t("banner.paragraph")}</p>
           </div>
         </div>
-        <div className="flex flex-wrap gap-4 lg:gap-8 items-center justify-center lg:justify-start border-b border-[#142b4a] pb-10">
-          <div className="border rounded-xl bg-[#142b4a] text-white h-13.25 w-full md:w-55.75 flex justify-center items-center gap-2">
+        <div className="flex flex-wrap gap-4 lg:gap-8 items-center justify-center lg:justify-start border-b border-[#142b4a] pb-10 cursor-pointer">
+          <div className="border rounded-xl bg-[#142b4a] hover:bg-[#23364f] duration-200 text-white h-13.25 w-full md:w-55.75 flex justify-center items-center gap-2">
             <span>
-              <Link to={"/"}>{t("banner.requestConsultation")}</Link>
+              <a href="https://t.me/your_id" target="_blank" rel="noreferrer">
+                {t("banner.requestConsultation")}
+              </a>
             </span>
             <span>
               {isPersian ? <FaArrowLeftLong /> : <FaArrowRightLong />}
             </span>
           </div>
           <div className="border border-[#142b4a]/51 rounded-xl h-13.25 w-full md:w-38.75 flex justify-center items-center">
-            <Link to={"/"}>{t("banner.viewSolutions")}</Link>
+            <a
+              href="#solutions"
+              onClick={(e) => scrollToSection(e, "solutions")}
+              className="border border-[#142b4a]/51 rounded-xl h-13.25 w-full md:w-55.75 flex justify-center items-center"
+            >
+              {t("banner.viewSolutions")}
+            </a>
           </div>
         </div>
       </div>

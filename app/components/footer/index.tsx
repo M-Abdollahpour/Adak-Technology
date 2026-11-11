@@ -3,9 +3,14 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { BsTelephoneFill } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
-import { Link } from "react-router";
+import { scrollToSection } from "~/utils/scrollToSection";
 
-const quickLinks = ["home", "services", "aboutUs", "contactUs"] as const;
+const quickLinks = [
+  { key: "home", target: "home" },
+  { key: "services", target: "services" },
+  { key: "aboutUs", target: "about" },
+  { key: "contactUs", target: "contact" },
+] as const;
 
 const Footer = () => {
   const { t, isPersian } = useLanguage();
@@ -36,12 +41,17 @@ const Footer = () => {
           </h4>
           <div className="flex max-w-60 flex-col gap-1 text-[15px]">
             {quickLinks.map((item) => (
-              <Link key={item} to={"/"}>
-                <div className="flex items-center justify-between">
-                  <span>{t(`footer.quickAccess.${item}`)}</span>
+              <a
+                key={item.key}
+                href={`#${item.target}`}
+                onClick={(e) => scrollToSection(e, item.target)}
+                className="cursor-pointer"
+              >
+                <div className="flex items-center justify-between gap-2 hover:text-[#F2701F] hover:font-bold duration-200">
+                  <span>{t(`footer.quickAccess.${item.key}`)}</span>
                   <span>{isPersian ? <FaAngleLeft /> : <FaAngleRight />}</span>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

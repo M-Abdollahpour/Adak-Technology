@@ -1,17 +1,17 @@
 import { useState } from "react";
-import { Link } from "react-router";
 import { useLanguage } from "~/hooks/useLanguage";
+import { scrollToSection } from "~/utils/scrollToSection";
 import ToggleLanguage from "../language";
 
 const menuItems = [
-  "home",
-  "services",
-  "articles",
-  "solutions",
-  "equipment",
-  "projects",
-  "aboutUs",
-  "contactUs",
+  { key: "home", target: "home" },
+  { key: "services", target: "services" },
+  { key: "articles", target: "articles" },
+  { key: "solutions", target: "solutions" },
+  { key: "equipment", target: "equipment" },
+  { key: "projects", target: "projects" },
+  { key: "aboutUs", target: "about" },
+  { key: "contactUs", target: "contact" },
 ] as const;
 
 const HambergerMenu = () => {
@@ -48,10 +48,16 @@ const HambergerMenu = () => {
           <ToggleLanguage />
         </div>
         {menuItems.map((item) => (
-          <div key={item} className="border-b border-gray-200/70 pb-3">
-            <Link to={"/"} onClick={() => setIsOpen(false)}>
-              {t(`menu.${item}`)}
-            </Link>
+          <div key={item.key} className="border-b border-gray-200/70 pb-3">
+            <a
+              href={`#${item.target}`}
+              onClick={(e) => {
+                scrollToSection(e, item.target);
+                setIsOpen(false);
+              }}
+            >
+              {t(`menu.${item.key}`)}
+            </a>
           </div>
         ))}
       </nav>

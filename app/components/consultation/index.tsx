@@ -9,12 +9,14 @@ const ConsultationCustomer = () => {
         <h3 className="font-bold">{t("consultation.title")}</h3>
         <p>{t("consultation.paragraph")}</p>
       </div>
-      <Link
-        to={"/"}
+      <a
+        href="https://t.me/your_id"
+        target="_blank"
+        rel="noreferrer"
         className="flex h-11 w-full shrink-0 items-center justify-center rounded-full bg-[#FF680D] text-[18px] font-bold sm:w-58.5 md:text-[20px]"
       >
         {t("consultation.request")}
-      </Link>
+      </a>
     </div>
   );
 };

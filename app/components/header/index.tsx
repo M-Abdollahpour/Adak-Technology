@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { useLanguage } from "~/hooks/useLanguage";
-import { Link } from "react-router";
 import HambergerMenu from "../ui/hambergerMenu";
 import { CommentOutlined, CustomerServiceOutlined } from "@ant-design/icons";
 import ToggleLanguage from "../ui/language";
 import { FloatButton } from "antd";
+import { scrollToSection } from "../../utils/scrollToSection";
 export default function Header() {
   const { t, isPersian } = useLanguage();
   const header = useRef<HTMLElement | null>(null);
@@ -27,14 +27,14 @@ export default function Header() {
     document.documentElement.dir = isPersian ? "rtl" : "ltr";
   }, [isPersian]);
   const menuItems = [
-    "home",
-    "services",
-    "articles",
-    "solutions",
-    "equipment",
-    "projects",
-    "aboutUs",
-    "contactUs",
+    { key: "home", target: "home" },
+    { key: "services", target: "services" },
+    { key: "articles", target: "articles" },
+    { key: "solutions", target: "solutions" },
+    { key: "equipment", target: "equipment" },
+    { key: "projects", target: "projects" },
+    { key: "aboutUs", target: "about" },
+    { key: "contactUs", target: "contact" },
   ] as const;
   return (
     <header
@@ -54,17 +54,24 @@ export default function Header() {
         >
           {menuItems.map((item) => (
             <div
-              key={item}
+              key={item.key}
               className="group cursor-pointer relative pb-1 after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-[#f2701f] after:transition-all after:duration-300 after:content-[''] hover:after:w-full"
             >
-              <Link to={"/"}>{t(`menu.${item}`)}</Link>
+              <a
+                href={`#${item.target}`}
+                onClick={(e) => scrollToSection(e, item.target)}
+              >
+                {t(`menu.${item.key}`)}
+              </a>
             </div>
           ))}
         </nav>
         <div
           className={`sl:flex shrink-0 hidden sm:text-[12px] md:text-[14px] xl:text-[20px] md:py-2 md:px-1 md:justify-center xl:justify-between items-center gap-2 font-bold rounded-[14px] xl:rounded-[18px] px-3 xl:pl-7.5 xl:pr-6.5 h-10  xl:h-13.25 md:w-45 xl:w-63.75 bg-[#142b4a] text-white cursor-pointer border-none hover:bg-[#1f3f69] duration-200`}
         >
-          <span>{t("menu.requestConsultation")}</span>
+          <a href="https://t.me/your_id" target="_blank" rel="noreferrer">
+            {t("menu.requestConsultation")}
+          </a>
           {isPersian ? <FaArrowLeftLong /> : <FaArrowRightLong />}
         </div>
         <HambergerMenu />
