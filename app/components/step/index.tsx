@@ -76,6 +76,11 @@ const Step = () => {
           </div>
         ))}
       </div>
+      <div className="mt-5 flex w-full items-center justify-center gap-7">
+        <span className="inline-block h-0.5 w-1/3 bg-[#142B4A] opacity-65"></span>
+        <span className="inline-block h-2 w-2 shrink-0 rounded-full bg-[#142B4A] opacity-65"></span>
+        <span className="inline-block h-0.5 w-1/3 bg-[#142B4A] opacity-65"></span>
+      </div>
     </div>
   );
 };

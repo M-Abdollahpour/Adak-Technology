@@ -22,6 +22,21 @@ body {
     color-scheme: dark;
   }
 }
+@theme {
+  --animate-wave: wave 1.2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+    background-color: #f2701f;
+  }
+  50% {
+    transform: translateY(-10px);
+    background-color: #d7e2f2;
+  }
+}
 @keyframes float-y {
   0%,
   100% {

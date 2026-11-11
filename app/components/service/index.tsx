@@ -54,7 +54,7 @@ const Service = () => {
               {s.tags.map((tag) => (
                 <div
                   key={tag}
-                  className="rounded-full border px-5 py-1 text-[13px] md:text-[14px]"
+                  className="rounded-full cursor-pointer hover:bg-[#1e1e1e] hover:text-[#ffffff] duration-200 border px-5 py-1 text-[13px] md:text-[14px]"
                 >
                   {t(`services.${s.key}.data.${tag}`)}
                 </div>

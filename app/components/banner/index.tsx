@@ -44,7 +44,7 @@ const Banner = () => {
             <a
               href="#solutions"
               onClick={(e) => scrollToSection(e, "solutions")}
-              className="border border-[#142b4a]/51 rounded-xl h-13.25 w-full md:w-55.75 flex justify-center items-center"
+              className="border hover:bg-[#f2701f] hover:text-[#ffffff] duration-200 border-[#142b4a]/51 rounded-xl h-13.25 w-full md:w-55.75 flex justify-center items-center"
             >
               {t("banner.viewSolutions")}
             </a>

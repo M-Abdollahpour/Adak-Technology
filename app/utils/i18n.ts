@@ -379,6 +379,10 @@ i18n.use(initReactI18next).init({
             description: "Increasing productivity and reducing costs",
           },
         },
+        trustCompanies: {
+          title: "Partnerships",
+          process: "Organizations that have placed their trust in ADAK",
+        },
         consultation: {
           title: "Get in touch with us for expert consultation",
           paragraph:

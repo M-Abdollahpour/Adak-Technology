@@ -13,7 +13,7 @@ const ConsultationCustomer = () => {
         href="https://t.me/your_id"
         target="_blank"
         rel="noreferrer"
-        className="flex h-11 w-full shrink-0 items-center justify-center rounded-full bg-[#FF680D] text-[18px] font-bold sm:w-58.5 md:text-[20px]"
+        className="flex h-11 w-full shrink-0 items-center justify-center rounded-full bg-[#FF680D] hover:bg-[#fb8840] duration-200 text-[18px] font-bold sm:w-58.5 md:text-[20px]"
       >
         {t("consultation.request")}
       </a>

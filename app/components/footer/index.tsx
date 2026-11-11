@@ -16,7 +16,7 @@ const Footer = () => {
   const { t, isPersian } = useLanguage();
   return (
     <footer className="mt-11 overflow-hidden px-4">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 ms:grid-cols-2 xl:grid-cols-3">
         <div className="flex flex-col gap-7">
           <div>
             <img
@@ -28,13 +28,17 @@ const Footer = () => {
             <p>{t("footer.about.tagline")}</p>
           </div>
           <div className="flex gap-4">
-            <span className="block h-8 w-8 rounded-full bg-[#D7E2F2]"></span>
-            <span className="block h-8 w-8 rounded-full bg-[#D7E2F2]"></span>
-            <span className="block h-8 w-8 rounded-full bg-[#D7E2F2]"></span>
-            <span className="block h-8 w-8 rounded-full bg-[#D7E2F2]"></span>
+            <div className="flex gap-4">
+              {[0, 1, 2, 3].map((i) => (
+                <span
+                  key={i}
+                  className="block h-8 w-8 animate-wave rounded-full bg-[#D7E2F2]"
+                  style={{ animationDelay: `${i * 0.15}s` }}
+                ></span>
+              ))}
+            </div>
           </div>
         </div>
-
         <div className="flex flex-col gap-3">
           <h4 className="text-[20px] font-bold">
             {t("footer.quickAccess.title")}
@@ -56,7 +60,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 sm:col-span-2 lg:col-span-1">
+        <div className="flex flex-col gap-3 lg:col-span-1">
           <h4 className="text-[20px] font-bold">
             {t("footer.contactUs.title")}
           </h4>
