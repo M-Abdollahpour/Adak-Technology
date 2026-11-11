@@ -7,6 +7,9 @@ import { MdOutlineEngineering } from "react-icons/md";
 import { BiSupport } from "react-icons/bi";
 import { scrollToSection } from "~/utils/scrollToSection";
 import { useLanguage } from "~/hooks/useLanguage";
+import CountUpModule from "react-countup";
+const CountUp = (CountUpModule as any).default ?? CountUpModule;
+
 const Banner = () => {
   const { t, isPersian } = useLanguage();
 
@@ -63,7 +66,17 @@ const Banner = () => {
             </div>
             <div className="flex gap-3 items-center ">
               <span className="text-[#142b4a] text-3xl">
-                +{t("banner.countOne")}
+                +
+                <CountUp
+                  end={120}
+                  start={0}
+                  duration={2}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  formattingFn={(n: number) =>
+                    n.toLocaleString(isPersian ? "fa-IR" : "en-US")
+                  }
+                />
               </span>
               <div className="flex flex-col text-xl">
                 <span className="text-[#0e1f36]">{t("banner.projects")}</span>
@@ -79,7 +92,17 @@ const Banner = () => {
             </div>
             <div className="flex gap-3 items-center">
               <span className="text-[#142b4a] text-3xl">
-                +{t("banner.countTwo")}
+                +
+                <CountUp
+                  end={80}
+                  start={0}
+                  duration={2}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  formattingFn={(n: number) =>
+                    n.toLocaleString(isPersian ? "fa-IR" : "en-US")
+                  }
+                />
               </span>
               <div className="flex flex-col text-xl">
                 <span className="text-[#0e1f36]">
