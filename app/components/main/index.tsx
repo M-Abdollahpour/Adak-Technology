@@ -1,13 +1,14 @@
-import { Fragment } from "react/jsx-runtime";
+import { Fragment, lazy, Suspense } from "react";
 import Banner from "../banner";
 import Partnership from "../partnership";
 import Step from "../step";
 import Service from "../service";
-import Project from "../project";
 import ProcessAdaK from "../processAdak";
 import ArticleNews from "../articleNews";
 import TrustComponies from "../trustCompnies";
 import ConsultationCustomer from "../consultation";
+
+const Project = lazy(() => import("../project"));
 
 const Main = () => {
   return (
@@ -25,8 +26,10 @@ const Main = () => {
         <section id="services">
           <Service />
         </section>
-        <section id="projects">
-          <Project />
+        <section id="projects" className="min-h-125">
+          <Suspense fallback={null}>
+            <Project />
+          </Suspense>
         </section>
         <section id="about">
           <ProcessAdaK />

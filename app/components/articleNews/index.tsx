@@ -15,11 +15,13 @@ const ArticleNews = () => {
               <div className="absolute inset-x-3 -top-2 h-12 rounded-t-[28px] bg-linear-to-b from-[#F2701F] to-transparent" />
               <div className="relative h-44.75 w-full overflow-hidden rounded-[28px]">
                 <img
+                  loading="lazy"
                   className="absolute inset-0 z-0 h-full w-full object-cover"
                   src="/images/article/back.svg"
                   alt=""
                 />
                 <img
+                  loading="lazy"
                   className="absolute inset-0 z-10 h-full w-full object-cover"
                   src="/images/article/Vector.svg"
                   alt="مجازی سازی زیرساخت"
@@ -46,11 +48,13 @@ const ArticleNews = () => {
               <div className="absolute inset-x-3 -top-2 h-12 rounded-t-[28px] bg-linear-to-b from-[#F2701F] to-transparent" />
               <div className="relative h-44.75 w-full overflow-hidden rounded-[28px]">
                 <img
+                  loading="lazy"
                   className="absolute inset-0 z-0 h-full w-full object-cover"
                   src="/images/article/back.svg"
                   alt=""
                 />
                 <img
+                  loading="lazy"
                   className="absolute inset-0 z-10 h-full w-full object-cover"
                   src="/images/article/Vector.svg"
                   alt="مجازی سازی زیرساخت"
@@ -77,11 +81,13 @@ const ArticleNews = () => {
               <div className="absolute inset-x-3 -top-2 h-12 rounded-t-[28px] bg-linear-to-b from-[#F2701F] to-transparent" />
               <div className="relative h-44.75 w-full overflow-hidden rounded-[28px]">
                 <img
+                  loading="lazy"
                   className="absolute inset-0 z-0 h-full w-full object-cover"
                   src="/images/article/back.svg"
                   alt=""
                 />
                 <img
+                  loading="lazy"
                   className="absolute inset-0 z-10 h-full w-full object-cover"
                   src="/images/article/Vector.svg"
                   alt="مجازی سازی زیرساخت"

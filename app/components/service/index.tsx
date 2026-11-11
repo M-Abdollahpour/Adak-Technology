@@ -37,6 +37,7 @@ const Service = () => {
           >
             <div className="flex w-full flex-col items-center gap-4 px-5 ms:flex-row md:px-10">
               <img
+                loading="lazy"
                 className="h-auto max-w-full shrink-0"
                 src={s.img}
                 alt={s.alt}

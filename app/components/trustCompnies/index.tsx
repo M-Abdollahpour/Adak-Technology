@@ -29,7 +29,7 @@ const TrustComponies = () => {
               key={`${item.id}-${index}`}
               className="mx-8 flex shrink-0 items-center"
             >
-              <img src={item.src} alt="لوگوی کمپانی" />
+              <img loading="lazy" src={item.src} alt="لوگوی کمپانی" />
             </div>
           ))}
         </div>

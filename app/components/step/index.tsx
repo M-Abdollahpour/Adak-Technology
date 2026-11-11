@@ -65,7 +65,7 @@ const Step = () => {
             <div className="hover:border-[#FE8716] border-2 duration-200 border-transparent flex flex-col gap-10 items-center justify-start pt-5 rounded-xl h-60.75 w-51.5 shadow-[6px_6px_20px_3px_rgba(0,0,0,0.15),-6px_-6px_20px_3px_rgba(0,0,0,0.10)]">
               <div className="flex flex-col gap-2 justify-center items-center">
                 <span>
-                  <img src={item.logo} alt="" />
+                  <img loading="lazy" src={item.logo} alt="لوگو" />
                 </span>
                 <h3 className="text-[16px]">{item.title}</h3>
               </div>

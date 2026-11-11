@@ -15,7 +15,11 @@ const Partnership = () => {
       <div className="flex flex-col flex-wrap justify-center md:flex-row gap-4">
         <div className="border-3 py-2 px-5 md:px-10 border-[#FE8716] rounded-[22px] flex flex-col sl:flex-row items-center gap-4 hover:scale-102 duration-200">
           <div>
-            <img src="/images/cardimage/cardone.svg" alt="پروژه جدید" />
+            <img
+              loading="lazy"
+              src="/images/cardimage/cardone.svg"
+              alt="پروژه جدید"
+            />
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-[#AE5603] text-[17px] md:text-[24px] font-bold">
@@ -36,6 +40,7 @@ const Partnership = () => {
         <div className="border-3 py-2 px-5 md:px-10 border-[#182E50] rounded-[22px] flex flex-col sl:flex-row items-center gap-4 hover:scale-102 duration-200">
           <div>
             <img
+              loading="lazy"
               className="max-w-full h-auto"
               src="/images/cardimage/cardtwo.svg"
               alt="تأمین تجهیزات"
@@ -60,6 +65,7 @@ const Partnership = () => {
         <div className="border-3 py-2 px-5 md:px-10 border-[#086444] rounded-[22px] flex flex-col sl:flex-row items-center gap-4 hover:scale-102 duration-200">
           <div>
             <img
+              loading="lazy"
               className="max-w-full h-auto"
               src="/images/cardimage/cardthree.svg"
               alt="پروژه جدید"

@@ -53,6 +53,7 @@ const Banner = () => {
       </div>
       <div className="">
         <img
+          loading="lazy"
           className="h-auto max-w-full object-contain animate-float-y"
           src="https://adakfan.ir/assets/adak-hero-B1qMsahv.png"
           alt="banner about structure"

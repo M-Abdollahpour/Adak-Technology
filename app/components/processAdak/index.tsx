@@ -22,6 +22,7 @@ const ProcessAdaK = () => {
           <Fragment key={item.key}>
             <div className="flex min-h-58.25 w-full max-w-55.5 flex-col items-center justify-around gap-4 rounded-2xl px-3 py-4 shadow-[-8px_-8px_12px_rgba(0,0,0,0.15),8px_8px_12px_rgba(0,0,0,0.15)] sm:w-55.5">
               <img
+                loading="lazy"
                 className="h-auto max-w-full"
                 src={item.img}
                 alt={item.alt}

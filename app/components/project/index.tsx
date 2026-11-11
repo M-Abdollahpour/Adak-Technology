@@ -59,7 +59,12 @@ const Project = () => {
                   <span className="absolute right-15 top-0 rounded-full bg-[#D2621D] px-4 py-1 text-[18px] font-bold text-white  md:text-[22px]">
                     {t(`project.${p.key}.title`)}
                   </span>
-                  <img className="h-auto max-w-full" src={p.img} alt={p.alt} />
+                  <img
+                    loading="lazy"
+                    className="h-auto max-w-full"
+                    src={p.img}
+                    alt={p.alt}
+                  />
                   <h3 className="self-start px-6 text-[20px] font-bold md:px-13 md:text-[23.5px]">
                     {t(`project.${p.key}.header`)}
                   </h3>
