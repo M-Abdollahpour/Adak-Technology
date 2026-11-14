@@ -39,6 +39,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <noscript>لطفاً جاوااسکریپت مرورگر را فعال کنید.</noscript>
         {children}
         <ScrollRestoration />
         <Scripts />
